@@ -47,6 +47,10 @@ def get_client():
         raise ValueError("Gemini API key not found!")
 
     return genai.Client(api_key=api_key)
+
+
+
+
 MODEL_CANDIDATES = [
     "gemini-3.6-flash",
     "gemini-3.5-flash",
