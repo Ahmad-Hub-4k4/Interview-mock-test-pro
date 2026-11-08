@@ -35,22 +35,18 @@ for key, value in defaults.items():
 
 @st.cache_resource
 def get_client():
-   api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
 
-if not api_key:
-    try:
-        api_key = st.secrets["GEMINI_API_KEY"]
-    except Exception:
-        api_key = None
+    if not api_key:
+        try:
+            api_key = st.secrets["GEMINI_API_KEY"]
+        except Exception:
+            api_key = None
 
-if not api_key:
-    raise ValueError("Gemini API key not found!")
+    if not api_key:
+        raise ValueError("Gemini API key not found!")
 
     return genai.Client(api_key=api_key)
-
-
-client = get_client()
-
 MODEL_CANDIDATES = [
     "gemini-3.6-flash",
     "gemini-3.5-flash",
