@@ -59,7 +59,8 @@ MODEL_CANDIDATES = [
 
 
 # =============== QUESTION GENERATION ===============
-
+def open_start_test():
+    st.session_state.page = "Start Test"
 def generate_question(role, difficulty, interview_type):
 
     prompt = f"""
