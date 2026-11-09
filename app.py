@@ -120,7 +120,7 @@ def evaluate_answer(question, answer, role):
     Be professional, constructive and accurate.
     Do not give high marks without justification.
     """
-
+    client = get_client()
     for model in MODEL_CANDIDATES:
         try:
             response = client.models.generate_content(
