@@ -76,7 +76,7 @@ def generate_question(role, difficulty, interview_type):
     2. One short hint
     """
 
-    for model in MODEL_CANDIDATES:
+    client = get_client()
         try:
             response = client.models.generate_content(
                 model=model,
