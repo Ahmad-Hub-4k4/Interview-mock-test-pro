@@ -78,6 +78,8 @@ def generate_question(role, difficulty, interview_type):
     """
 
     client = get_client()
+
+    for model in MODEL_CANDIDATES:
         try:
             response = client.models.generate_content(
                 model=model,
