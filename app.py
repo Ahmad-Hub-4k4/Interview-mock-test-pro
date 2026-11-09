@@ -489,9 +489,11 @@ if st.session_state.page == "Dashboard":
         </div>
         """, unsafe_allow_html=True)
 
-        if st.button("Begin Test  →", use_container_width=True):
-            st.session_state.page = "Start Test"
-            st.rerun()
+       st.button(
+    "Begin Test  →",
+    use_container_width=True,
+    on_click=open_start_test
+)
 
     with right:
         st.markdown('<div class="section-heading">Your Progress</div>',
