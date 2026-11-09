@@ -489,10 +489,10 @@ if st.session_state.page == "Dashboard":
         </div>
         """, unsafe_allow_html=True)
 
-       st.button(
-    "Begin Test  →",
-    use_container_width=True,
-    on_click=open_start_test
+    st.button(
+        "Begin Test  →",
+        use_container_width=True,
+        on_click=open_start_test
 )
 
     with right:
