@@ -556,9 +556,11 @@ if st.session_state.page == "Dashboard":
 
     st.write("")
 
-    if st.button("Practice a Category  →", use_container_width=True):
-        st.session_state.page = "Start Test"
-        st.rerun()
+    st.button(
+        "Practice a Category  →",
+        use_container_width=True,
+        on_click=open_start_test
+)
 
 
 # =============== START TEST ===============
